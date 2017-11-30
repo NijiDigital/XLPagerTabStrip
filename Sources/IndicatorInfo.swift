@@ -30,20 +30,21 @@ public struct IndicatorInfo {
     public var image: UIImage?
     public var highlightedImage: UIImage?
     public var accessibilityLabel: String?
-    public var userInfo: Any?
-    
+    public var userInfo: Any? 
+    public var tintColor: UIColor?
+
     public init(title: String?) {
         self.title = title
         self.accessibilityLabel = title
     }
-    
-    public init(image: UIImage?, highlightedImage: UIImage? = nil, userInfo: Any? = nil) {
+
+    public init(image: UIImage?, highlightedImage: UIImage? = nil) {
         self.image = image
         self.highlightedImage = highlightedImage
         self.userInfo = userInfo
     }
-    
-    public init(title: String?, image: UIImage?, highlightedImage: UIImage? = nil, userInfo: Any? = nil) {
+
+    public init(title: String?, image: UIImage?, highlightedImage: UIImage? = nil) {
         self.title = title
         self.accessibilityLabel = title
         self.image = image
@@ -58,6 +59,13 @@ public struct IndicatorInfo {
         self.highlightedImage = highlightedImage
         self.userInfo = userInfo
     }
+
+  public init(title: String?, image: UIImage?, highlightedImage: UIImage? = nil, tintColor: UIColor? = nil) {
+    self.title = title
+    self.image = image
+    self.highlightedImage = highlightedImage
+    self.tintColor = tintColor
+  }
 
 }
 
