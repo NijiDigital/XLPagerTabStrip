@@ -29,6 +29,14 @@ open class ButtonBarViewCell: UICollectionViewCell {
 
     @IBOutlet open var imageView: UIImageView!
     @IBOutlet open var label: UILabel!
+    @IBOutlet open var badgeLabel: UILabel? {
+      didSet {
+        if let badgeLabelUW = badgeLabel {
+          badgeLabelUW.layer.cornerRadius = badgeLabelUW.bounds.size.height / 2
+          badgeLabelUW.layer.masksToBounds = true
+        }
+      }
+    }
 
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

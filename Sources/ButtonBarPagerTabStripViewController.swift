@@ -331,6 +331,15 @@ open class ButtonBarPagerTabStripViewController: PagerTabStripViewController, Pa
         cell.imageView.isHidden = true
       }
 
+      if let badgeText = indicatorInfo.badgeTitle {
+        cell.badgeLabel?.text = badgeText
+        cell.badgeLabel?.backgroundColor = indicatorInfo.tintColor
+        cell.badgeLabel?.textColor = UIColor.white
+        cell.badgeLabel?.isHidden = false
+        cell.badgeLabel?.layer.cornerRadius = 5.0
+      } else {
+        cell.badgeLabel?.isHidden = true
+      }
 
         if let highlightedImage = indicatorInfo.highlightedImage {
             cell.imageView.highlightedImage = highlightedImage

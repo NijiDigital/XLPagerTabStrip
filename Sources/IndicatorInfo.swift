@@ -32,6 +32,7 @@ public struct IndicatorInfo {
     public var accessibilityLabel: String?
     public var userInfo: Any? 
     public var tintColor: UIColor?
+    public var badgeTitle: String?
 
     public init(title: String?) {
         self.title = title
@@ -65,6 +66,14 @@ public struct IndicatorInfo {
     self.image = image
     self.highlightedImage = highlightedImage
     self.tintColor = tintColor
+  }
+
+  public init(title: String?, image: UIImage?, highlightedImage: UIImage? = nil, tintColor: UIColor? = nil, badgeTitle: String? = nil) {
+    self.title = title
+    self.image = image
+    self.highlightedImage = highlightedImage
+    self.tintColor = tintColor
+    self.badgeTitle = badgeTitle
   }
 
 }
