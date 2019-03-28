@@ -42,7 +42,6 @@ public struct IndicatorInfo {
     public init(image: UIImage?, highlightedImage: UIImage? = nil) {
         self.image = image
         self.highlightedImage = highlightedImage
-        self.userInfo = userInfo
     }
 
     public init(title: String?, image: UIImage?, highlightedImage: UIImage? = nil) {
@@ -50,7 +49,6 @@ public struct IndicatorInfo {
         self.accessibilityLabel = title
         self.image = image
         self.highlightedImage = highlightedImage
-        self.userInfo = userInfo
     }
     
     public init(title: String?, accessibilityLabel:String?, image: UIImage?, highlightedImage: UIImage? = nil, userInfo: Any? = nil) {
